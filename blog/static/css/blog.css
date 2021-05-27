@@ -60,10 +60,12 @@ header {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .header__logo-text {
-  margin-left: 60px;
+  margin-left: 40px;
   font-family: 'Cormorant Garamond', serif;
   font-size: 32px;
   line-height: 60px;
@@ -73,13 +75,13 @@ header {
 .header__list {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 60px;
+  margin-left: 40px;
   list-style-type: none;
   text-transform: uppercase;
 }
 
 .header__item {
-  margin-right: 60px; /* разобраться с отступами в меню */
+  margin-right: 40px; /* разобраться с отступами в меню */
   font-size: 23px;
   line-height: 60px;
 }
@@ -138,6 +140,13 @@ header {
   text-transform: uppercase;
   line-height: 60px;
   text-align: center;
+}
+
+.footer__link {
+  font-size: 18px;
+  line-height: 60px;
+  color: #2b2b2b;
+  text-decoration: none;
 }
 
 /* End footer */
