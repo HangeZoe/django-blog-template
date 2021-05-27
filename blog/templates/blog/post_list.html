@@ -5,7 +5,7 @@
       <div class="latest-articles__post">
           <h2><a href="{% url 'post_detail' pk=post.pk %}" class="latest-articles__title">{{ post.title }}</a></h2>
           <p class="latest-articles__date">{{ post.published_date }}</p>
-          <p class="latest-articles__text">{{ post.text|linebreaksbr }}</p>
+          <p class="latest-articles__text">{{ post.text|truncatechars:800 }}<a href="{% url 'post_detail' pk=post.pk %}" class="latest-articles__link"> Read more</a></p>
       </div>
   {% endfor %}
 {% endblock %}
