@@ -6,6 +6,7 @@
     <p class="latest-articles__text">{{ post.text|linebreaksbr }}</p>
     {% if user.is_authenticated %}
       <p><a class="latest-articles__edit-post" href="{% url 'post_edit' pk=post.pk %}">Edit this post</a></p>
+      <a class="latest-articles__edit-post" href="{% url 'post_remove' pk=post.pk %}">Delete this post</a>
     {% endif %}
     {% if post.published_date %}
         <p class="latest-articles__date">{{ post.published_date }}</p>
