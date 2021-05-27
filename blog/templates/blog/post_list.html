@@ -3,7 +3,7 @@
 {% block content %}
   {% for post in posts %}
       <div class="latest-articles__post">
-          <h2><a href="" class="latest-articles__title">{{ post.title }}</a></h2>
+          <h2><a href="{% url 'post_detail' pk=post.pk %}" class="latest-articles__title">{{ post.title }}</a></h2>
           <p class="latest-articles__date">{{ post.published_date }}</p>
           <p class="latest-articles__text">{{ post.text|linebreaksbr }}</p>
       </div>
