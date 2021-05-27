@@ -5,5 +5,8 @@
     <h2><a href="{% url 'post_detail' pk=post.pk %}" class="latest-articles__title">{{ post.title }}</a></h2>
     <p class="latest-articles__date">{{ post.published_date }}</p>
     <p class="latest-articles__text">{{ post.text|linebreaksbr }}</p>
+    {% if user.is_authenticated %}
+      <p><a class="latest-articles__edit-post" href="{% url 'post_edit' pk=post.pk %}">Edit this post</a></p>
 </div>
+    {% endif %}
 {% endblock %}
