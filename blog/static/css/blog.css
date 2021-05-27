@@ -26,6 +26,9 @@ time, mark, audio, video {
   box-sizing: inherit;
 }
 
+a {
+  text-decoration: none;
+}
 /* End reset */
 
 
@@ -65,11 +68,13 @@ header {
 }
 
 .header__logo-text {
-  margin-left: 10px;
+  text-decoration: none;
+  margin-left: 40px;
   font-family: 'Cormorant Garamond', serif;
   font-size: 32px;
   line-height: 60px;
   text-transform: uppercase;
+  color: #2b2b2b;
 }
 
 .header__list {

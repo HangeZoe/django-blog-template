@@ -16,13 +16,10 @@
         <header class="header">
           <div class="header__wrapper">
             <div class="header__logo">
-              <p class="header__logo-text">Django blog!</p>
+              <a href="http://hangezoe.pythonanywhere.com/" class="header__logo-text">Django blog!</a>
             </div>
             <nav class="header__nav">
               <ul class="header__list">
-                <li class="header__item">
-                  <a href="http://hangezoe.pythonanywhere.com/" class="header__link">Posts</a>
-                </li>
                 {% if user.is_authenticated %}
                 <li class="header__item">
                   <p class="header__link">Hello {{ user.username }} <small>(<a href="{% url 'logout' %}" class="header__link">Log out</a>)</small></p>
