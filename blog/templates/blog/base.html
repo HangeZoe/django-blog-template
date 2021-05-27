@@ -16,23 +16,28 @@
         <header class="header">
           <div class="header__wrapper">
             <div class="header__logo">
-              <p class="header__logo-text">My first Django blog!</p>
+              <p class="header__logo-text">Django blog!</p>
             </div>
             <nav class="header__nav">
               <ul class="header__list">
                 <li class="header__item">
                   <a href="http://hangezoe.pythonanywhere.com/" class="header__link">Posts</a>
                 </li>
+                {% if user.is_authenticated %}
                 <li class="header__item">
-                  {% if user.is_authenticated %}
+                  <p class="header__link">Hello {{ user.username }} <small>(<a href="{% url 'logout' %}" class="header__link">Log out</a>)</small></p>
+                </li>
+                <li class="header__item">
                     <a href="{% url 'post_new' %}" class="header__link">New Post</a>
-                  {% endif %}
                 </li>
                 <li class="header__item">
-                  {% if user.is_authenticated %}
                     <a href="{% url 'post_draft_list' %}" class="header__link">Drafts</a>
-                  {% endif %}
                 </li>
+                {% else %}
+                <li class="header__item">
+                    <a href="{% url 'login' %}" class="header__link">Log in</a>
+                </li>
+                {% endif %}
               </ul>
             </nav>
           </div>

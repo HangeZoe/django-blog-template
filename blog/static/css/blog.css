@@ -65,7 +65,7 @@ header {
 }
 
 .header__logo-text {
-  margin-left: 40px;
+  margin-left: 10px;
   font-family: 'Cormorant Garamond', serif;
   font-size: 32px;
   line-height: 60px;
@@ -75,13 +75,13 @@ header {
 .header__list {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 40px;
+  margin-left: 10px;
   list-style-type: none;
   text-transform: uppercase;
 }
 
 .header__item {
-  margin-right: 40px; /* разобраться с отступами в меню */
+  margin-right: 40px;
   font-size: 23px;
   line-height: 60px;
 }
