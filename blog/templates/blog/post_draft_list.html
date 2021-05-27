@@ -3,9 +3,9 @@
 {% block content %}
     {% for post in posts %}
         <div class="latest-articles__post">
-          <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
-          <p class="latest-articles__date">created: {{ post.created_date|date:'d-m-Y' }}</p>
-          <p class="latest-articles__text">{{ post.text|truncatechars:200 }}</p>
+          <h1><a href="{% url 'post_detail' pk=post.pk %}" class="latest-articles__title">{{ post.title }}</a></h1>
+          <p class="latest-articles__date">{{ post.created_date|date:'d-m-Y' }}</p>
+          <p class="latest-articles__text">{{ post.text|truncatechars:300 }}<a href="{% url 'post_detail' pk=post.pk %}" class="latest-articles__link"> Read more</a></p>
         </div>
     {% endfor %}
 {% endblock %}
