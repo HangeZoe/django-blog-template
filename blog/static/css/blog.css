@@ -162,3 +162,32 @@ header {
 }
 
 /* End footer */
+
+/* Start login form */
+
+.form__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20% 20%;
+}
+
+input {
+    display: block;
+    font-size: 18px;
+    padding: 15px;
+    margin-bottom: 10px;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+form{
+    width: 90%;
+    min-width: 250px;
+    max-width: 350px;
+}
+
+/* End login form */
